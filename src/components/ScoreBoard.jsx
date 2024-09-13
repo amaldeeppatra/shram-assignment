@@ -13,7 +13,7 @@ const ScoreBoard = () => {
       if (!userId) return;
 
       try {
-        const response = await axios.get(`${apiURL}/users/${userId}`);
+        const response = await axios.get(`${apiURL}/scores/${userId}`);
         setHighScore(response.data.highScore);
         setPastScores(response.data.pastScores);
       } catch (error) {

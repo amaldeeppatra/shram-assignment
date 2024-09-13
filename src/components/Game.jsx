@@ -47,7 +47,7 @@ function Game() {
     if (!userId) return;
 
     try {
-      const response = await axios.post(`${apiURL}/users/update-score`, { userId, score: newScore });
+      const response = await axios.post(`${apiURL}/scores/update-score`, { userId, score: newScore });
       const { highScore: updatedHighScore } = response.data;
       console.log(response.data);
 
