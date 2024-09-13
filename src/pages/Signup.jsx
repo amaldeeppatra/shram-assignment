@@ -19,6 +19,7 @@ const Signup = () => {
     setSuccess("");
 
     try {
+      // POST: creates a new user and saves it in the DB
       await axios.post(`${apiURL}/users/signup`, {
         username,
         password,

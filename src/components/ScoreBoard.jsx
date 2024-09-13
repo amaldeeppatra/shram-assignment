@@ -13,6 +13,7 @@ const ScoreBoard = () => {
       if (!userId) return;
 
       try {
+        // GET: fetches all past scores of user
         const response = await axios.get(`${apiURL}/scores/${userId}`);
         setHighScore(response.data.highScore);
         setPastScores(response.data.pastScores);
@@ -29,6 +30,7 @@ const ScoreBoard = () => {
       <h2>Your High Score: {highScore}</h2>
       <h3>Past Scores:</h3>
       <div className="scrollable-scores">
+        
         {pastScores.length > 0 ? (
           <ul>
             {pastScores.map((score, index) => (
@@ -38,6 +40,7 @@ const ScoreBoard = () => {
         ) : (
           <p>No past scores available.</p>
         )}
+
       </div>
     </div>
   );

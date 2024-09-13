@@ -14,6 +14,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
+      // POST: logs in the user
       const response = await axios.post(`${apiURL}/users/login`, { username, password });
       const { userId, token, username: receivedUsername } = response.data;
 

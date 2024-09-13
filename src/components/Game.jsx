@@ -15,16 +15,16 @@ function Game() {
   const [username, setUsername] = useState('');
 
   function generateRandomNumber() {
-    return Math.floor(Math.random() * 10) + 1;
+    return Math.floor(Math.random() * 10) + 1;    // generates random number between 1 and 10
   }
 
   useEffect(() => {
-    const storedHighScore = localStorage.getItem('highScore');
+    const storedHighScore = localStorage.getItem('highScore');    // stores the high score in local storage of browser
     if (storedHighScore) {
       setHighScore(parseInt(storedHighScore, 10));
     }
 
-    const storedUsername = localStorage.getItem('username');
+    const storedUsername = localStorage.getItem('username');    // stores the username in local storage of browser
     if (storedUsername) {
       setUsername(storedUsername);
     }
@@ -47,10 +47,12 @@ function Game() {
     if (!userId) return;
 
     try {
+      // POST: update the score in DB
       const response = await axios.post(`${apiURL}/scores/update-score`, { userId, score: newScore });
       const { highScore: updatedHighScore } = response.data;
       console.log(response.data);
-
+      
+      // shows the confetti celebration if high scores get broken
       if (newScore > localStorage.getItem('highScore')) {
         setCelebrate(true);
       } else {
@@ -71,6 +73,7 @@ function Game() {
     setCelebrate(false);
   }
 
+  // logout
   const handleLogout = () => {
     localStorage.removeItem('userId');
     localStorage.removeItem('username');
@@ -91,6 +94,7 @@ function Game() {
       {celebrate && <Confetti className="confetti-container" />}
       <h3>Current Score: {score}</h3>
       <h3>High Score: {highScore}</h3>
+
       {!gameOver ? (
         <>
           <p>Guess the number (between 1 and 10):</p>
@@ -107,6 +111,7 @@ function Game() {
           <button onClick={resetGame}>Play Again</button>
         </>
       )}
+      
     </div>
   );
 }
