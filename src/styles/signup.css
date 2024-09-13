@@ -1,0 +1,115 @@
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.signup-container h2{
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formGrp{
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.formGrp label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+.formGrp input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.formGrp input:focus{
+  border-color: #2575fc;
+  outline: none;
+}
+
+.errorMsg,
+.successMsg{
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.errorMsg{
+  background-color: #ffdddd;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+}
+
+.successMsg{
+  background-color: #ddffdd;
+  color: #4f8a10;
+  border: 1px solid #4f8a10;
+}
+
+button{
+  background-color: #2575fc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+button:hover{
+  background-color: #1a5bbd;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loginLink{
+    color: #2575fc;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.loginLink:hover{
+    text-decoration: underline;
+}
+
+.inputField{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
