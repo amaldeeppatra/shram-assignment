@@ -7,7 +7,9 @@ Whenever you break the high score a confetti celebration comes congratulating yo
 
 ## How to run Code locally
 Clone the repository on your local machine(both frontend and backend), and open in any code editor(for e.g. VS Code).
+
 In the terminal, run npm install.
+
 Now start the server using npm run dev.
 
 ## Important
