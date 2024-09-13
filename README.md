@@ -17,5 +17,7 @@ The files where API end-point is used are:
   2. Signup.jsx
   3. Game.jsx
   4. ScoreBoard.jsx
+
 API URL - http://localhost:5000/api
+
 Backend repo - https://github.com/amaldeeppatra/shram-assignment-backend
